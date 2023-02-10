@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    background-color: #023047;
+    color: #ffb703;
+    font-family: 'Space Mono', monospace;
+}
+.progress{
+    background-color: #fefae0;
+    width: 28em;
+    height: 4em;
+    position: relative;
+    border-radius: 4px;
+}
+.progress::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: #ffb703;
+    border-radius: 4px;
+}
+.progress.running::after{
+    animation: progress 3s ease-in-out 1;
+}
+@keyframes progress{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+button{
+    all: unset;
+    font-size: 2em;
+    border: 1px solid #ffb703;
+    color: #fefae0;
+    padding: .25em 1em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+button:hover{
+    color: #fefae0;
+    background-color: #ffb70320;
+}
