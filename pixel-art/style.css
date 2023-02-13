@@ -1,0 +1,30 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #14213d;
+    color: white;
+}
+header{
+    margin-bottom: 1em;
+}
+.pixel-container{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    height: 40em;
+    width: 40em;
+    gap: .1em;
+}
+.pixel-cell{
+    background-color: var(--fill-color,white);
+    aspect-ratio: 1;
+    border: 1px solid ;
+    cursor: pointer;
+}
